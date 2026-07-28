@@ -1,0 +1,41 @@
+import java.util.*;
+
+public class main {
+
+    public static void main(String[] args) {
+
+        son s = new son();
+        daughter d = new daughter();
+        grandfather g = new grandfather();
+        father f = new father();
+
+        s.display();
+        d.display();
+        g.display();
+        f.display();
+    }
+}
+
+class grandfather {
+    public void display() {
+        System.out.println("from grandfather class");
+    }
+}
+
+class father extends grandfather {
+    public void display() {
+        System.out.println("from father class");
+    }
+}
+
+class son extends father {
+    public void display() {
+        System.out.println("from son class");
+    }
+}
+
+class daughter extends father {
+    public void display() {
+        System.out.println("from daughter class");
+    }
+}
